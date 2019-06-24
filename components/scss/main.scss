@@ -1,0 +1,25 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~animate.css/animate.css';
+
+.layout {
+  //   height: 100vh;
+}
+
+.home-index {
+  height: 80vh;
+}
+
+.news-img {
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.news-muted {
+  color: grey;
+  font-size: 0.8rem;
+}
+
+a {
+  @include transition(all 0.3s);
+  text-decoration: none !important;
+}
