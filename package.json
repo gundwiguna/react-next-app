@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://gundwiguna.github.io/nextjs",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "export": "npm run build && next export",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
