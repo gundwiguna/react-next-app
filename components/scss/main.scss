@@ -23,3 +23,11 @@ a {
   @include transition(all 0.3s);
   text-decoration: none !important;
 }
+
+#weather-table {
+  tr {
+    td {
+      padding: 0.2rem 
+    }
+  }
+}

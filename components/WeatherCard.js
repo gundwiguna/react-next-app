@@ -11,7 +11,6 @@ import {
   Table,
   Label,
   Button,
-  FormGroup,
 } from 'reactstrap'
 import WOW from 'react-wow'
 
@@ -69,6 +68,7 @@ class WeatherCard extends Component {
         weather = [{}],
         main: { humidity = '', pressure = '', temp = '', temp_max = '', temp_min = '' } = {},
         sys: { sunrise = '', sunset = '' } = {},
+        wind: { speed = '', deg = '' } = {},
       } = {},
     } = this.state
     return (
@@ -99,9 +99,9 @@ class WeatherCard extends Component {
               </div>
             </WOW>
             {this.state.searchLocation || !this.props.isGeolocationAvailable ? (
-              <div>Your browser does not support Geolocation</div>
+              <div>Your browser does not support Geolocation. Type your city manually.</div>
             ) : !this.props.isGeolocationEnabled ? (
-              <div>Geolocation is not enabled</div>
+              <div>Geolocation is not enabled. Type your city manually.</div>
             ) : this.props.coords ? (
               <Card>
                 <WOW animation="fadeInUp" duration="500ms" delay="200ms">
@@ -124,7 +124,7 @@ class WeatherCard extends Component {
                         </b>
                       </div>
                     </CardTitle>
-                    <Table>
+                    <Table id="weather-table">
                       <tbody>
                         <tr>
                           <td>Humidity</td>
@@ -165,6 +165,14 @@ class WeatherCard extends Component {
                               second: '2-digit',
                             })}
                           </td>
+                        </tr>
+                        <tr>
+                          <td>Wind Speed</td>
+                          <td>{`${speed}m/s`}</td>
+                        </tr>
+                        <tr>
+                          <td>Wind Direction</td>
+                          <td>{`${deg}`}&#176;</td>
                         </tr>
                       </tbody>
                     </Table>

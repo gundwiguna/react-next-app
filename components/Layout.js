@@ -1,6 +1,6 @@
 import React from 'react'
 import './scss/main.scss'
-import { Navbar, NavItem, Nav, NavLink } from 'reactstrap'
+import { Navbar, NavItem, Nav } from 'reactstrap'
 import Head from 'next/head'
 import Link from 'next/link'
 
@@ -13,7 +13,7 @@ const Layout = props => {
           rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
         <title>News and Weather</title>
       </Head>
