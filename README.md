@@ -15,6 +15,8 @@ git clone https://github.com/gundwiguna/react-next-app.git
 ```
 
 ### Install all dependencies
+1. Install node.js
+2. Go to inside directory `react-next-app` and run install command
 
 ```
 npm install
